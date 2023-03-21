@@ -1,4 +1,4 @@
- # Adopt a pet Project with React Router 6.9.0
+ # Adopt a pet Project with React Router 6.9.0 :dog:
  This is a Codecademy project. The course were written in React Router v5, and I had had to adapt it to the newest version.
 
  I wanted to work with the lastest version of NodeJS, React and React-Router-dom because that how real life works, isn't it?
