@@ -12,6 +12,7 @@ function App() {
       <div>
         <Navigation />
         <Routes>
+          <Route path=":type/:id/*" element={<PetDetailsPage />} />
           <Route path=":type?/" element={<HomePage />} />
         </Routes>
       </div>
