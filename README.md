@@ -82,3 +82,8 @@ In v6, this app should be rewritten to use the 'navigate' API. Most of the time 
 
 export default Search;
 ```
+
+### Step 25
+<code><Redirect /></code> is outdated in v6, so instead use <code><Navigate /></code> component as follows:
+
+`<Navigate to="/pet-details-not-found" replace />`

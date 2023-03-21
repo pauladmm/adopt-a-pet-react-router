@@ -14,6 +14,10 @@ function App() {
         <Routes>
           <Route path="search/*" element={<SearchPage />} />
           <Route path=":type/:id/*" element={<PetDetailsPage />} />
+          <Route
+            path="pet-details-not-found/"
+            element={<PetDetailsNotFound />}
+          />
           <Route path=":type?/" element={<HomePage />} />
         </Routes>
       </div>
