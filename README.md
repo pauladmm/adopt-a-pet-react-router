@@ -29,27 +29,30 @@ to
 
 ### Step 5
 Updated Route syntax: 
+
     `<Route path=":type/" element={<HomePage />} />`
-Wrap <code><Route /></code> in <code><Routes></code> or it will not render
+
+Wrap <code>Route</code> in <code>Routes</code> or it will not render
 
 ### Step 10
-Optionally, I change className and activeClassName for the next ternary operator:
+Optionally, I change *className* and *activeClassName* for the next ternary operator:
 
 `className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}`
 
 ([Explained in docs](https://reactrouter.com/en/6.9.0/components/nav-link))
 
 ### Step 14-15
-React Router v6 introduces a 'Routes' component that is kind of like 'Switch'. So in this version you do not need to use 'Switch' element at all.
+React Router v6 introduces a <code>Routes</code> component that is kind of like <code>Switch</code>. So in this version you do not need to use <code>Switch</code> element at all.
+
 More info in [docs](https://reactrouter.com/en/6.9.0/upgrading/v5#upgrade-all-switch-elements-to-routes).
 
 Skip these steps.
 
 ### Step 16-17
-In v6, this app should be rewritten to use the 'navigate' API. Most of the time this means changing <code>useHistory</code> to <code>useNavigate</code> and changing the 'history.push' callsite to 'navigation(/path)'
+In v6, this app should be rewritten to use the 'navigate' API. Most of the time this means changing <code>useHistory</code> to <code>useNavigate</code> and changing the *history.push* callsite to *navigation()*
  More in [docs](https://reactrouter.com/en/6.9.0/upgrading/v5#use-usenavigate-instead-of-usehistory)
 
- At this time, my code in ./components/search/index.js looks like the following:
+ At this time, my code in *./components/search/index.js* looks like the following:
 
  ```
  import React, { useRef } from 'react';
@@ -84,13 +87,13 @@ export default Search;
 ```
 
 ### Step 25
-<code><Redirect /></code> is outdated in v6, so instead use <code><Navigate /></code> component as follows:
+<code>Redirect</code> is outdated in v6, so instead use <code>Navigate</code> component as follows:
 
 `<Navigate to="/pet-details-not-found" replace />`
 
 ### Step 26-28
-As in steps 16 and 17 was said, useHistory is deprecated, so useNavigate() hook is used instead.
-Personally, I refactored the <code><PetDetailsNotFound /></code> component and directly used 'navigate()' within onClick event:
+As in steps 16 and 17 was said, <code>useHistory</code> is deprecated, so <code>useNavigate()</code> hook is used instead.
+Personally, I refactored the <code><PetDetailsNotFound /></code> component and directly used *navigate()* within onClick event:
 
  ```
     <button className="button" onClick={() => navigate(-1)}>
