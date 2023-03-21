@@ -87,3 +87,13 @@ export default Search;
 <code><Redirect /></code> is outdated in v6, so instead use <code><Navigate /></code> component as follows:
 
 `<Navigate to="/pet-details-not-found" replace />`
+
+### Step 26-28
+As in steps 16 and 17 was said, useHistory is deprecated, so useNavigate() hook is used instead.
+Personally, I refactored the <code><PetDetailsNotFound /></code> component and directly used 'navigate()' within onClick event:
+
+ ```
+    <button className="button" onClick={() => navigate(-1)}>
+          Go Back
+    </button>
+```
