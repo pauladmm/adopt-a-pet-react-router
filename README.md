@@ -11,21 +11,32 @@ So here I leave the changes I have had to do since I refuse to work with older v
 
 When I first try to run de App without modifying anything
 
-npm start
+<code>npm start</code>
 
-I realised that the terminal threw an error "error:0308010C:digital envelope routines::unsupported".
+I realised that the terminal threw an error `"error:0308010C:digital envelope routines::unsupported"`.
 You just have to change in your package.json this line
 
+```
 "start": "react-scripts start"
+```
 
 to
 
+```
 "start": "react-scripts --openssl-legacy-provider start".
-
+```
 
 
 ### Step 5
-Updated Route syntax: <Route path=":type/" element={<HomePage />} />
+Updated Route syntax: 
+    `<Route path=":type/" element={<HomePage />} />`
 Wrap <Route /> in <Routes> or it will not render
+
+### Step 10
+Optionally, I change className and activeClassName for the next ternary operator:
+
+`className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}`
+
+([Explained in docs](https://reactrouter.com/en/6.9.0/components/nav-link))
 
 
