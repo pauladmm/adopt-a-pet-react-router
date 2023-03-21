@@ -93,7 +93,7 @@ export default Search;
 
 ### Step 26-28
 As in steps 16 and 17 was said, <code>useHistory</code> is deprecated, so <code>useNavigate()</code> hook is used instead.
-Personally, I refactored the <code><PetDetailsNotFound /></code> component and directly used *navigate()* within onClick event:
+Personally, I refactored the <code>PetDetailsNotFound</code> component and directly used *navigate()* within onClick event:
 
  ```
     <button className="button" onClick={() => navigate(-1)}>
